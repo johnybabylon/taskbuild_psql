@@ -1,0 +1,11 @@
+
+development:
+  adapter: postgresql
+  encoding: SQL_ASCII
+  database: taskbuild_psql
+  pool: 5
+  username: postgres 
+  password: postgres
+  host: localhost
+  
+  

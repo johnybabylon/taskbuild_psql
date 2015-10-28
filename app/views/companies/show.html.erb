@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Address 1:</strong>
+  <%= @company.address_1 %>
+</p>
+
+<p>
+  <strong>Address 2:</strong>
+  <%= @company.address_2 %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @company.zip %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @company.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @company.phone %>
+</p>
+
+<%= link_to 'Create Admin', admin_new_path(:id => @company.id) %> |
+
+<%= link_to 'Edit', edit_company_path(@company) %> 

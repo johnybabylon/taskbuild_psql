@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+
+<h1>Welcome <%= @now.name %></h1><br>
+
+        <td><%= @company.name %></td>
+        <td><%= @company.address_1 %></td>
+        <td><%= @company.address_2 %></td>
+        <td><%= @company.zip %></td>
+        <td><%= @company.email %></td>
+        <td><%= @company.phone %></td>
+
+<h3>Listing Users</h3>
+
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @company.users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <% if user.tasks.any? %>
+      <% user.tasks.each do |task| %>
+        
+          <td><%= task.name %></td>
+        
+      <% end %>
+    <% end %>
+        <td><%= link_to 'Add Task', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    
+    
+    
+    
+  </tbody>
+</table>
+
+
+
+<br>
+
+<%= button_to 'Add Employee', new_user_path %>
+
+</div>
+
+<%= render 'layouts/footer' %>

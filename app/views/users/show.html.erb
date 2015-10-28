@@ -1,0 +1,23 @@
+<body>
+<div id='wrapper'>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<%= link_to 'Add Task', new_task_path %> |
+<%= link_to 'Edit', edit_user_path(@user) %> 
+
+
+      
+</div>
+
+<%= render 'layouts/footer' %>
+
+</body>
